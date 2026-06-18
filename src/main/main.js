@@ -6,8 +6,8 @@ const path = require('node:path');
 
 const createWindow = () => {
     const window = new BrowserWindow({
-        width: 900,
-        height: 700,
+        width: 1200,
+        height: 900,
         autoHideMenuBar: true,
         backgroundColor: 'rgb(17, 17, 27)',
         icon: path.join(__dirname, '../assets/app-icons/mark11.ico'),

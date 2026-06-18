@@ -1,0 +1,38 @@
+/*This file contains the styles for the sidebar toolbar elements.*/
+.sidebarToolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#create-file-btn, #open-file-btn, #settings-btn {
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    user-select: none;
+}
+
+#create-file-btn:hover, #open-file-btn:hover {
+    opacity: 0.5;
+}
+
+#settings-btn:hover {
+    opacity: 0.5;
+    transform: rotate(90deg);
+}
+
+@media (prefers-color-scheme: dark) {
+    #create-file-btn, #open-file-btn, #settings-btn {
+        filter: brightness(0) invert(1);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    #create-file-btn, #open-file-btn, #settings-btn {
+        filter: brightness(0);
+    }
+}

@@ -8,5 +8,6 @@
 @import url('./container/app-container.css');
 /* Import sidebar */
 @import url('./sidebar/sidebar.css');
+@import url('./sidebar/sidebar-toolbar.css');
 /* Import variables */
 @import url('./variables/color-variables.css');
