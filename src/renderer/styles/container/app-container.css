@@ -1,0 +1,8 @@
+/*This file contains app container styles.*/
+.appContainer {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    min-width: 100vw;
+    box-sizing: border-box;
+}

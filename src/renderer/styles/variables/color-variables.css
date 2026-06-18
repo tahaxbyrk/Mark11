@@ -1,0 +1,16 @@
+/*This file contains variables of the application's primary colors (light, dark).*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body-bg-color: rgb(17, 17, 27);
+        --text-color: rgb(205, 214, 244);
+        --text-selection: rgb(180, 190, 254);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --body-bg-color: rgb(220, 224, 232);
+        --text-color: rgb(76, 79, 105);
+        --text-selection: rgb(180, 190, 254);
+    }
+}
