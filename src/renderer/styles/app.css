@@ -9,5 +9,7 @@
 /* Import sidebar */
 @import url('./sidebar/sidebar.css');
 @import url('./sidebar/sidebar-toolbar.css');
+/* Import tooltip */
+@import url('./tooltip/tooltip.css');
 /* Import variables */
 @import url('./variables/color-variables.css');
