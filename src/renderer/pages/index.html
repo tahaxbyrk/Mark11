@@ -30,6 +30,20 @@
         <div class="sidebarBody">
             <div id="note-container"></div>
         </div>
+        <dialog class="settingsDialog" id="settings-dialog">
+            <aside class="settingsSidebar">
+                <div class="settingsSidebarTitle">Settings</div>
+                <button class="settingsCloseBtn" id="dialog-close-btn">&times;</button>
+                <div class="settingsNavItem active" data-page="appearance">
+                    <img src="../../assets/icons/appearance.svg" class="settingsNavIcon" alt="Appearance" draggable="false">
+                    Appearance
+                </div>
+            </aside>
+
+            <div class="settingsContent">
+                <div class="settingsTopbar"></div>
+            </div>
+        </dialog>
     </aside>
 </div>
 <script src="../scripts/app.js"></script>

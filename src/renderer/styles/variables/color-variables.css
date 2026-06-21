@@ -3,11 +3,14 @@
     :root {
         --body-bg-color: rgb(17, 17, 27);
         --text-color: rgb(205, 214, 244);
+        --sub-text-color: rgb(186, 194, 222);
         --text-selection-color: rgb(180, 190, 254);
         --sidebar-bg-color: rgb(24, 24, 37);
         --border-color: rgba(255, 255, 255, 0.05);
         --select-bg-color: rgb(49, 50, 68);
         --tooltip-bg-color: rgb(30, 30, 46);
+        --dialog-bg-color: rgb(30, 30, 46);
+        --tab-hover-bg-color: rgb(69, 71, 90);
     }
 }
 
@@ -15,10 +18,13 @@
     :root {
         --body-bg-color: rgb(220, 224, 232);
         --text-color: rgb(76, 79, 105);
+        --sub-text-color: rgb(92, 95, 119);
         --text-selection-color: rgb(180, 190, 254);
         --sidebar-bg-color: rgb(230, 233, 239);
         --border-color: rgb(92, 95, 119);
         --select-bg-color: rgb(204, 208, 218);
         --tooltip-bg-color: rgb(239, 241, 245);
+        --dialog-bg-color: rgb(239, 241, 245);
+        --tab-hover-bg-color: rgb(188, 192, 204);
     }
 }

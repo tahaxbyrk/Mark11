@@ -6,6 +6,10 @@
 @import url('./body/body.css');
 /* Import container */
 @import url('./container/app-container.css');
+/* Import dialog */
+@import url('./dialog/settings-dialog/settings-dialog.css');
+@import url('./dialog/settings-dialog/settings-sidebar.css');
+@import url('./dialog/settings-dialog/settings-content.css');
 /* Import sidebar */
 @import url('./sidebar/sidebar.css');
 @import url('./sidebar/sidebar-toolbar.css');

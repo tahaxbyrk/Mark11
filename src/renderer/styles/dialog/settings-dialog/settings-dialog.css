@@ -1,0 +1,46 @@
+/*This file contains the basic styles for the settings dialog (only the dialog itself and close button).*/
+.settingsDialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    width: 800px;
+    height: 600px;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    background-color: var(--dialog-bg-color);
+    color: var(--text-color);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.settingsDialog[open] {
+    display: flex;
+}
+
+.settingsDialog::backdrop {
+    backdrop-filter: blur(10px);
+}
+
+.settingsCloseBtn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.5s;
+    user-select: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.settingsCloseBtn:hover {
+    color: red;
+}

@@ -1,0 +1,54 @@
+/*This file contains the sidebar styles for the settings dialog.*/
+.settingsSidebar {
+    width: 210px;
+    min-width: 210px;
+    border-right: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+}
+
+.settingsSidebarTitle {
+    padding: 15px 15px 5px;
+    font-size: 10px;
+    color: var(--sub-text-color);
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+.settingsNavItem {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 6px;
+    margin: 2px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--sub-text-color);
+    transition: 0.15s;
+    user-select: none;
+}
+
+.settingsNavItem:hover {
+    background-color: var(--tab-hover-bg-color);
+    color: var(--text-color);
+}
+
+.settingsNavItem.active {
+    background-color: var(--tab-hover-bg-color);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.settingsNavIcon {
+    width: 18px;
+    height: 18px;
+    filter: invert(1);
+    opacity: 0.7;
+}
+
+.settingsNavItem.active .settingsNavIcon {
+    opacity: 1;
+}
