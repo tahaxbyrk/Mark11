@@ -52,3 +52,15 @@
 .settingsNavItem.active .settingsNavIcon {
     opacity: 1;
 }
+
+@media (prefers-color-scheme: dark) {
+    .settingsNavIcon {
+        filter: brightness(0) invert(1);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .settingsNavIcon {
+        filter: brightness(0);
+    }
+}
