@@ -9,9 +9,12 @@ const Store = require('electron-store');
 const store = new Store( { name: 'settings' } );
 
 const createWindow = () => {
+    const bounds  = store.get('windowBounds', { width: 1200, height: 900, x: undefined, y: undefined});
     const window = new BrowserWindow({
-        width: 1200,
-        height: 900,
+        width: bounds.width,
+        height: bounds.height,
+        x: bounds.x,
+        y: bounds.y,
         autoHideMenuBar: true,
         backgroundColor: 'rgb(17, 17, 27)',
         icon: path.join(__dirname, '../assets/app-icons/mark11.ico'),
@@ -19,6 +22,12 @@ const createWindow = () => {
             preload: path.join(__dirname, '../preload/preload.js'),
             contextIsolation: true,
             nodeIntegration: false,
+        }
+    });
+
+    window.on('close', () => {
+        if (!window.isMaximized()) {
+            store.set('windowBounds', window.getBounds());
         }
     });
 
