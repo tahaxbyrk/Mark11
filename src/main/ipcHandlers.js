@@ -21,6 +21,10 @@ function registerIpcHandlers() {
         return store.get(key);
     });
 
+    ipcMain.handle('setSettings', (event, key, value) => {
+        store.set(key, value);
+    });
+
     // Create new file function
     ipcMain.handle('createFile', async () => {
         const { filePath, canceled } = await dialog.showSaveDialog({

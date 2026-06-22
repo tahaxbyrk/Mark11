@@ -6,6 +6,7 @@ const { contextBridge, ipcRenderer } = require('electron');
 contextBridge.exposeInMainWorld('electronAPI', {
     setTheme: (theme) => ipcRenderer.invoke('setTheme', theme),
     getSettings: (key) => ipcRenderer.invoke('getSettings', key),
+    setSettings: (key, value) => ipcRenderer.invoke('setSettings', key, value),
     createFile: () => ipcRenderer.invoke('createFile'),
     openFile: (filePaths) => ipcRenderer.invoke('openFile', filePaths),
     saveFile: (filePath, content) => ipcRenderer.invoke('saveFile', filePath, content),
