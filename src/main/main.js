@@ -3,7 +3,8 @@
 // It is responsible for creating the application window and managing the application's lifecycle.
 const { app, BrowserWindow, nativeTheme, Menu } = require('electron/main');
 const path = require('node:path');
-const {registerIpcHandlers} = require('./ipcHandlers');
+const { registerIpcHandlers} = require('./ipcHandlers');
+const { initAutoUpdater } = require('../../updater.js');
 
 const Store = require('electron-store');
 const store = new Store( { name: 'settings' } );
@@ -47,6 +48,10 @@ const createWindow = () => {
         }
     });
 
+    window.webContents.on('did-finish-load', () => {
+        initAutoUpdater(3000);
+    });
+
     window.on('close', () => {
         if (!window.isMaximized()) {
             store.set('windowBounds', window.getBounds());
@@ -57,6 +62,9 @@ const createWindow = () => {
 };
 
 app.whenReady().then(() => {
+    if (process.platform === 'win32') {
+        app.setAppUserModelId('com.tahaxbyrk.mark11');
+    }
     registerIpcHandlers();
     let savedTheme;
     savedTheme = store.get('theme', 'system');

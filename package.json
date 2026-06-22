@@ -6,6 +6,9 @@
   "main": "src/main/main.js",
   "scripts": {
     "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "publish": "electron-builder --publish always",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,10 +27,57 @@
   },
   "homepage": "https://github.com/tahaxbyrk/Mark11#readme",
   "devDependencies": {
-    "electron": "^42.4.1"
+    "electron": "^42.4.1",
+    "electron-builder": "^26.15.3"
   },
   "dependencies": {
+    "electron-log": "^5.4.4",
     "electron-store": "^8.2.0",
+    "electron-updater": "^6.8.9",
     "marked": "^18.0.5"
+  },
+  "build": {
+    "appId": "com.tahaxbyrk.mark11",
+    "productName": "Mark11",
+    "copyright": "Copyright © 2024 tahaxbyrk",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "tahaxbyrk",
+        "repo": "Mark11",
+        "releaseType": "release"
+      }
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json",
+      "updater.js"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "src/assets/app-icons/mark11.ico",
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "installerIcon": "src/assets/app-icons/mark11.ico",
+      "uninstallerIcon": "src/assets/app-icons/mark11.ico",
+      "installerHeaderIcon": "src/assets/app-icons/mark11.ico",
+      "deleteAppDataOnUninstall": false,
+      "shortcutName": "Mark11"
+    }
   }
 }
