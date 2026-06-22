@@ -1,0 +1,145 @@
+/*Markdown styles for light and dark theme*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        #preview h1, #preview h2, #preview h3,
+        #preview h4, #preview h5, #preview h6 {
+            color: #cba6f7;
+            margin: 16px 0 8px 0;
+            line-height: 1.3;
+        }
+
+        #preview h1 { font-size: 2em; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; }
+        #preview h2 { font-size: 1.5em; border-bottom: 1px solid var(--border-color); padding-bottom: 6px; }
+        #preview h3 { font-size: 1.2em; }
+
+        #preview strong {
+            color: #f5c2e7;
+            font-weight: 700;
+        }
+
+        #preview em {
+            color: #89dceb;
+            font-style: italic;
+        }
+
+        #preview code {
+            background-color: var(--select-bg-color);
+            color: #a6e3a1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Cascadia Code', 'Fira Code', monospace;
+            font-size: 0.9em;
+        }
+
+        #preview pre {
+            background-color: var(--select-bg-color);
+            border-radius: 8px;
+            padding: 16px;
+            overflow-x: auto;
+            margin: 12px 0;
+        }
+
+        #preview pre code {
+            background: none;
+            padding: 0;
+        }
+
+        #preview blockquote {
+            border-left: 4px solid #cba6f7;
+            margin: 12px 0;
+            padding: 8px 16px;
+            background-color: var(--select-bg-color);
+            border-radius: 0 8px 8px 0;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        #preview hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 24px 0;
+        }
+
+        #preview ul, #preview ol {
+            padding-left: 24px;
+            margin: 8px 0;
+        }
+
+        #preview li {
+            margin: 4px 0;
+            line-height: 1.6;
+        }
+
+        #preview a {
+            color: #89b4fa;
+            text-decoration: none;
+        }
+
+        #preview a:hover {
+            text-decoration: underline;
+        }
+
+        #preview table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 12px 0;
+        }
+
+        #preview th {
+            background-color: var(--select-bg-color);
+            color: #cba6f7;
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        #preview td {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        #preview tr:nth-child(even) {
+            background-color: var(--select-bg-color);
+            opacity: 0.6;
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        #preview h1, #preview h2, #preview h3,
+        #preview h4, #preview h5, #preview h6 {
+            color: #7c3aed;
+        }
+
+        #preview strong {
+            color: #d946ef;
+        }
+
+        #preview em {
+            color: #0891b2;
+        }
+
+        #preview code {
+            color: #16a34a;
+            background-color: var(--select-bg-color);
+        }
+
+        #preview pre {
+            background-color: var(--select-bg-color);
+        }
+
+        #preview blockquote {
+            border-left-color: #7c3aed;
+            background-color: var(--select-bg-color);
+        }
+
+        #preview a {
+            color: #2563eb;
+        }
+
+        #preview th {
+            color: #7c3aed;
+            background-color: var(--select-bg-color);
+        }
+    }
+}
