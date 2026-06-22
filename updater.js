@@ -19,7 +19,7 @@ autoUpdater.on('update-downloaded', async () => {
   });
 
   if (response === 0) {
-    autoUpdater.quitAndInstall(false, true);
+    autoUpdater.quitAndInstall(true, true);
   }
 });
 
